@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Real Estate Price Prediction</h2>
+            <h3>Total SQFT</h3><br><input id="second" name="Total SQFT" required="required">
+            <h3>Total Bathroom</h3><input id="third" name="Bath" required="required">
+            <h3>Price per SQFT</h3><br><input id="fourth" name="Price Per SQFT" required="required">
+            <h3>BHK</h3><br><select name="BHK" id="bhk" required="required">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+            </select>
+	    <h3>Size</h3><br><select name="Size" id="Size" required="required">
+			<option value="0">1 BHK</option>
+			<option value="1">1 Bedroom</option>
+			<option value="2">1 Rk</option>
+			<option value="3">10 BHK</option>
+			<option value="4">10 Bedroom</option>
+			<option value="5">2 BHK</option>
+			<option value="6">2 Bedroom</option>
+			<option value="7">3 BHK</option>
+			<option value="8">3 Bedroom</option>
+			<option value="9">4 BHK</option>
+			<option value="10">4 Bedroom</option>
+			<option value="11">5 BHK</option>
+			<option value="12">5 Bedroom</option>
+			<option value="13">6 BHK</option>
+			<option value="14">6 Bedroom</option>
+			<option value="15">7 BHK</option>
+			<option value="16">7 Bedroom</option>
+			<option value="17">8 BHK</option>
+			<option value="18">8 Bedroom</option>
+			<option value="19">9 BHK</option>
+			<option value="20">9 Bedroom</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Calculate the Price</button>
+            <br>
+
+        </form>
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+    <style>
+        body {
+            background-color: lightslategray;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
